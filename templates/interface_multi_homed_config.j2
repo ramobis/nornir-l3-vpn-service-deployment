@@ -1,0 +1,9 @@
+{% for interface in interfaces %}
+interface {{ interface.name }}
+ encapsulation dot1Q {{ interface.name.split('.')[1] }}
+ vrf forwarding {{ service }}
+ ip address {{ interface.ip }}
+ standby {{ interface.name.split('.')[1] }} ip {{ interface.hsrp_ip }}
+ standby {{ interface.name.split('.')[1] }} priority {{ hsrp_priority }}
+ standby {{ interface.name.split('.')[1] }} preempt
+{% endfor %}

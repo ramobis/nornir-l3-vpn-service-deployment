@@ -1,0 +1,7 @@
+---
+data: {
+  service_file: "services.yaml",
+  bgp_asn: 65000,
+  system_vrfs: ["mgmt", "default"],
+  primary_loopback: "Loopback0"
+}

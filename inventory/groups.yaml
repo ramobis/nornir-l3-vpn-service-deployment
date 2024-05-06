@@ -1,0 +1,21 @@
+---
+cisco:
+  username: cisco
+  platform: ios
+  connection_options:
+    napalm:
+      extras:
+        optional_args:
+          disabled_algorithms: { "pubkeys": ["rsa-sha2-256","rsa-sha2-512"]}
+          key_file: /home/boss/.ssh/id_rsa
+          ssh_config_file: /home/boss/.ssh/config
+          use_keys: True
+site-A:
+  data:
+    multi_homed: True
+site-B:
+  data:
+    multi_homed: False
+site-C:
+  data:
+    mutli_homed: False

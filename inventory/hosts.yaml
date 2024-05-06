@@ -1,0 +1,29 @@
+---
+edge-01.lab:
+  hostname: 10.8.34.3
+  groups:
+    - cisco
+    - site-A
+  data:
+    hsrp:
+      vip_offset: 1
+      priority: 10
+edge-02.lab:
+  hostname: 10.8.34.6
+  groups:
+    - cisco
+    - site-A
+  data:
+    hsrp:
+        vip_offset: 2
+        priority: 90
+edge-03.lab:
+  hostname: 10.8.34.8
+  groups:
+    - cisco
+    - site-B
+edge-04.lab:
+  hostname: 10.8.34.13
+  groups:
+    - cisco
+    - site-C

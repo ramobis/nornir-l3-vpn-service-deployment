@@ -1,0 +1,6 @@
+nornir
+nornir_napalm
+nornir_utils
+nornir_rich
+nornir_jinja2
+ipaddress

@@ -1,0 +1,39 @@
+---
+services:
+  - name: "CustA"
+    id: 10
+    description: "Customer A"
+    route_import:
+      - "10:0"
+    route_export:
+      - "10:0"
+    sites:
+        site-A:
+            interfaces:
+            - name: "GigabitEthernet4.10"
+              ip: "192.168.1.1 255.255.255.0"
+        site-B:
+            interfaces:
+            - name: "GigabitEthernet4"
+              ip: "192.168.2.1 255.255.255.0"
+        site-C:
+            interfaces:
+            - name: "GigabitEthernet4"
+              ip: "192.168.3.1 255.255.255.0"
+
+  - name: "CustB"
+    id: 20
+    description: "Customer B"
+    route_import:
+      - "20:0"
+    route_export:
+      - "20:0"
+    sites:
+        site-A:
+            interfaces:
+            - name: "GigabitEthernet4.20"
+              ip: "192.168.21.2 255.255.255.0"
+        site-B:
+            interfaces:
+            - name: "GigabitEthernet5"
+              ip: "192.168.22.1 255.255.255.0"

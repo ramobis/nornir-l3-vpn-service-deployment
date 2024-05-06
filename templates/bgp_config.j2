@@ -1,0 +1,6 @@
+router bgp {{ asn }}
+{% for service in services %}
+ address-family ipv4 vrf {{ service }}
+  redistribute connected
+ exit-address-family
+{% endfor %}

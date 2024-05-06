@@ -1,0 +1,13 @@
+{% for vrf in missing_vrfs %}
+vrf definition {{ vrf }}
+ description {{ service_data[vrf]['description'] }}
+ rd {{ loopback_ip }}:{{ service_data[vrf]['id'] }}
+{% for route_import in service_data[vrf]['route_import'] %}
+ route-target import {{ route_import }}
+{% endfor %} 
+{%- for route_export in service_data[vrf]['route_export'] %}
+ route-target export {{ route_export }}
+{% endfor %}
+address-family ipv4
+exit-address-family
+{% endfor %}

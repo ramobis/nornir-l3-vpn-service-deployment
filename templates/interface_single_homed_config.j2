@@ -1,0 +1,5 @@
+{% for interface in interfaces %}
+interface {{ interface.name }}
+ vrf forwarding {{ service }}
+ ip address {{ interface.ip }}
+{% endfor %}
